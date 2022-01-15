@@ -13,7 +13,6 @@ class TestMain:
         app.start().main().goto_search()
 
         print(value1)
-
         print(value2)
 
 

@@ -16,6 +16,7 @@ class TestMain:
 
         print(value2)
 
+
     def test_windows(self):
         app = App()
         app.start().main().goto_windows()

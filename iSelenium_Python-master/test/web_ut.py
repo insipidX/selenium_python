@@ -7,7 +7,8 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
-#from webdriver_manager.chrome import ChromeDriverManager
+
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 @allure.feature('Test Baidu WebUI')
@@ -36,8 +37,8 @@ class ISelenium(unittest.TestCase):
             print('使用无界面方式运行')
             chrome_options.add_argument("--headless")
 
-        #self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        path = r"D:\360极速浏览器下载\chromedriver_win32103\chromedriver.exe"
+       self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        #path = r"D:\360极速浏览器下载\chromedriver_win32103\chromedriver.exe"
         self.driver = webdriver.Chrome(executable_path=path)
         # executable_path = config.get('driver', 'chrome_driver'), options=chrome_options)
 

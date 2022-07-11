@@ -38,9 +38,9 @@ class ISelenium(unittest.TestCase):
             chrome_options.add_argument("--headless")
 
 
-        self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        #path = r"D:\360极速浏览器下载\chromedriver_win32103\chromedriver.exe"
-        #self.driver = webdriver.Chrome(executable_path=path)
+        #self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        path = r"D:\360极速浏览器下载\chromedriver_win32103\chromedriver.exe"
+        self.driver = webdriver.Chrome(executable_path=path)
         # executable_path = config.get('driver', 'chrome_driver'), options=chrome_options)
 
     @allure.story('Test key word 今日头条')

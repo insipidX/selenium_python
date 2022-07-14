@@ -39,7 +39,8 @@ class ISelenium(unittest.TestCase):
 
 
         #self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        path = r"D:\360极速浏览器下载\chromedriver_win32103\chromedriver.exe"
+        #path = r"D:\360极速浏览器下载\chromedriver_win32103\chromedriver.exe"
+        path='/var/jenkins_home/workspace/iselenium_python/chromedriver.exe'
         self.driver = webdriver.Chrome(executable_path=path)
         # executable_path = config.get('driver', 'chrome_driver'), options=chrome_options)
 

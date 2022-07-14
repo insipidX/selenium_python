@@ -40,10 +40,10 @@ class ISelenium(unittest.TestCase):
 
         #self.driver = webdriver.Chrome(ChromeDriverManager().install())
         #path = r"D:\360极速浏览器下载\chromedriver_win32103\chromedriver.exe"
-        path='/var/jenkins_home/workspace/iselenium_python/chromedriver.exe'
-        self.driver = webdriver.Chrome(executable_path=path)
+        #path='/var/jenkins_home/workspace/iselenium_python/chromedriver.exe'
+        #self.driver = webdriver.Chrome(executable_path=path)
         # executable_path = config.get('driver', 'chrome_driver'), options=chrome_options)
-
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     @allure.story('Test key word 今日头条')
     def test_webui_1(self):
         """ 测试用例1，验证'今日头条'关键词在百度上的搜索结果
